@@ -27,7 +27,7 @@ class Work(object):
 		elif self.morehours >= self.hours > self.basehours:
 			return (self.basehours * self.base) + self.calcExtra() 
 		else:
-			return (self.basehours * self.base) + (20 * self.calcOvertime())
+			return (self.basehours * self.base) + self.calcExtra()
 	
 	def printOutput(self):
 		print (self.name,"has worked",self.hours,"hours this week and earned",u"\u00A3",
